@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <head-menu />
+    <head-menu></head-menu>
     <div class="zk-wrapper">
-      <left-menu />
+      <left-menu></left-menu>
       <router-view class="zk-container"></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import HeadMenu from './common/header'
-import LeftMenu from './common/left-menu'
+import HeadMenu from './common/header.vue'
+import LeftMenu from './common/left-menu.vue'
 
 export default {
   name: 'app',
