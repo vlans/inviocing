@@ -1,22 +1,40 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <head-menu />
+    <div class="zk-wrapper">
+      <left-menu />
+      <router-view class="zk-container"></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import HeadMenu from './common/header'
+import LeftMenu from './common/left-menu'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    HeadMenu,
+    LeftMenu
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  html, body {
+    height: 100%;
+    min-width: 1200px;
+    font-size: 16px;
+  }
+  #app {
+    height: 100%;
+  }
+  .zk-wrapper {
+    display: flex;
+    height: calc(100% - 60px);
+  }
+  .zk-container {
+    width: calc(100% - 240px);
+    padding: 14px;
+  }
 </style>

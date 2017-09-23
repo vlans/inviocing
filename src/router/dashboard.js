@@ -4,6 +4,21 @@ export default [
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: Index
+    redirect: '/dashboard/stock',
+    component: Index,
+    children: [
+      {
+        path: '/dashboard/stock',
+        name: '/dashboard/stock'
+      },
+      {
+        path: '/dashboard/order',
+        name: '/dashboard/order'
+      },
+      {
+        path: '/dashboard/finance',
+        name: '/dashboard/finance'
+      }
+    ]
   }
 ]

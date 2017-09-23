@@ -10,6 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
+      redirect: '/dashboard',
       component: Home
     }
   ].concat(Dashboard)
